@@ -501,17 +501,18 @@ li {
   transform-style: preserve-3d;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;           /* slide ocupa toda a tela */
+  align-items: flex-start;   /* agora o conteúdo começa do topo */
+  height: 100vh;             /* slide ocupa toda a tela */
   width: 100%;
   box-sizing: border-box;
+  padding-top: 2rem;         /* dá um pequeno espaço no topo */
 }
 
 .slide-tarot .slide-content,
 .slide-content.tarot {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;   /* mantém tudo do topo */
   gap: 1rem;
   background: rgba(0, 0, 0, 0.75);
   padding: 1.2rem 1rem;
@@ -521,8 +522,8 @@ li {
   width: 95%;
   max-width: 900px;
 
-  max-height: 90vh;    /* limite máximo à tela */
-  overflow-y: auto;    /* scroll se o conteúdo for maior */
+  max-height: 95vh;          /* limite máximo à tela */
+  overflow-y: auto;          /* scroll se o conteúdo for maior */
   box-sizing: border-box;
 }
 
@@ -616,7 +617,7 @@ li {
 /* ======= MOBILE ======= */
 @media (max-width: 600px) {
   .slide-content.tarot {
-    height: 85%;        /* menor altura no mobile */
+    max-height: 90%;      /* menor altura no mobile */
     padding: 1rem 0.8rem;
   }
 
@@ -1029,6 +1030,7 @@ body.has-custom-cursor {
   color: rgba(246, 242, 238, 0.85);
   background: rgba(0, 0, 0, 0.55);
 }
+
 
 
 
