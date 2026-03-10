@@ -376,13 +376,12 @@ li {
   display: grid;
   gap: 1rem;
   margin-top: 1.1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
-.card img {
-  width: 100%;
-  max-width: 280px;
-  height: auto;
-}
+
 .card {
+  width: 100%;
+  box-sizing: border-box;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 16px;
@@ -1038,3 +1037,4 @@ body.has-custom-cursor {
   color: rgba(246, 242, 238, 0.85);
   background: rgba(0, 0, 0, 0.55);
 }
+
