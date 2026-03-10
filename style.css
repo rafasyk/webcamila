@@ -494,7 +494,7 @@ li {
 }
 
 /* ==========================
-   Tarot Slide Styling - CORRIGIDO
+   Tarot Slide Styling - SCROLL FUNCIONANDO
    ========================== */
 
 .slide {
@@ -502,7 +502,8 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;  /* altura total da tela */
+  height: 100vh;  /* garante que o slide ocupe toda a tela */
+  width: 100%;
 }
 
 .slide-tarot .slide-content,
@@ -519,12 +520,12 @@ li {
   width: 95%;
   max-width: 900px;
 
-  height: 90%;           /* container ocupa 90% da altura do slide */
-  overflow-y: auto;      /* scroll interno */
+  height: 90%;         /* ocupa quase toda a altura do slide */
+  overflow-y: auto;    /* permite scroll interno */
   box-sizing: border-box;
 }
 
-/* Grid de cartas */
+/* Tarot cards grid */
 .tarot-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -534,7 +535,7 @@ li {
   justify-items: center;
 }
 
-/* Carta individual */
+/* Individual tarot card */
 .tarot-card {
   width: 100%;
   max-width: 160px;
@@ -551,7 +552,7 @@ li {
   box-shadow: 0 10px 30px rgba(212, 175, 55, 0.35);
 }
 
-/* Frente da carta */
+/* Card front */
 .card-front {
   width: 100%;
   aspect-ratio: 2 / 3;
@@ -567,7 +568,7 @@ li {
   border-radius: 12px;
 }
 
-/* Nome e interpretação da carta */
+/* Card name and interpretation */
 .card-name {
   margin: 0.6rem 0 0.2rem;
   font-size: 0.95rem;
@@ -582,7 +583,7 @@ li {
   text-align: center;
 }
 
-/* Conclusão */
+/* Conclusion */
 .conclusion {
   margin-top: 1.5rem;
   font-style: italic;
@@ -592,17 +593,14 @@ li {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   overflow-wrap: break-word;
-  line-height: 1.4;
-  flex-shrink: 0; /* garante que o texto não seja cortado */
 }
 
-/* ====== MOBILE ====== */
+/* ======= MOBILE ======= */
 @media (max-width: 600px) {
   .slide-content.tarot {
-    height: 85%;          /* menor altura no mobile */
+    height: 85%;      /* menor altura no mobile */
     padding: 1rem 0.8rem;
   }
-}
 
   .tarot-cards {
     grid-template-columns: repeat(2, 1fr);
@@ -1013,6 +1011,7 @@ body.has-custom-cursor {
   color: rgba(246, 242, 238, 0.85);
   background: rgba(0, 0, 0, 0.55);
 }
+
 
 
 
