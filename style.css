@@ -494,16 +494,16 @@ li {
 }
 
 /* ==========================
-   Tarot Slide Styling - SCROLL INTERNO GARANTIDO
+   Tarot Slide Styling - SCROLL FUNCIONANDO
    ========================== */
 
 .slide-tarot {
   display: flex;
   justify-content: center;
   align-items: flex-start; /* conteúdo começa do topo */
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  padding-top: 2rem;
+  padding: 2rem 1rem;
   box-sizing: border-box;
 }
 
@@ -513,16 +513,16 @@ li {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  background: rgba(0, 0, 0, 0.75);
-  padding: 1.2rem 1rem;
-  border-radius: 16px;
-  text-align: center;
-
   width: 95%;
   max-width: 900px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 16px;
+  padding: 1.2rem 1rem;
+  text-align: center;
 
-  max-height: 85vh;      /* limite máximo à tela */
-  overflow-y: auto;      /* garante scroll interno */
+  /* importante para scroll interno */
+  max-height: 90vh;
+  overflow-y: auto;
   box-sizing: border-box;
 }
 
@@ -532,12 +532,12 @@ li {
 }
 
 .slide-content.tarot::-webkit-scrollbar-thumb {
-  background-color: rgba(212,175,55,0.5);
+  background-color: rgba(212, 175, 55, 0.5);
   border-radius: 4px;
 }
 
 .slide-content.tarot::-webkit-scrollbar-track {
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 
@@ -553,11 +553,11 @@ li {
 
 /* Carta individual */
 .tarot-card {
-  width: 100%;
-  max-width: 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  max-width: 160px;
   cursor: pointer;
   perspective: 1000px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -611,9 +611,9 @@ li {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  width: 100%;
   overflow-wrap: break-word;
   word-break: break-word;
-  width: 100%;
 }
 
 /* ======= MOBILE ======= */
@@ -1033,6 +1033,7 @@ body.has-custom-cursor {
   color: rgba(246, 242, 238, 0.85);
   background: rgba(0, 0, 0, 0.55);
 }
+
 
 
 
