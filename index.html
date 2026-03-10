@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camila's Wrapped — 2026 (até agora)</title>
+    <meta
+      name="description"
+      content="Experiência cinematográfica e minimalista sobre nosso 2026 até agora."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cursor" aria-hidden="true"></div>
+
+    <aside class="progress" aria-hidden="true">
+      <span class="progress-track"></span>
+      <span class="progress-fill" id="progressFill"></span>
+    </aside>
+
+    <main class="slides" id="slides">
+      <section class="slide active" data-theme="sunset" aria-label="Abertura">
+        <div class="slide-content">
+          <h1 class="hero reveal">CAMILA'S WRAPPED</h1>
+          <h2 class="subhero reveal">2026 (até agora)</h2>
+          <p class="small reveal">
+            Dados coletados desde 23/12<br />
+            Obs: Sujeito a atualização contínua até o final do ano.
+          </p>
+        </div>
+      </section>
+
+      <section class="slide" data-theme="sunset" aria-label="Categoria inesperada">
+        <div class="slide-content center">
+          <h2 class="title reveal">No meu Strava</h2>
+          <p class="statement reveal">
+            Foram corridos<br />
+          </p>
+          <p class="metric reveal"><span class="counter" data-target="39">0</span>KM</p>
+          <p class="small reveal">
+            Só para te ver
+          </p>
+          <p class="disclaimer reveal">
+            E cada KM valeu a pena! <br />
+          </p>    
+        </div>
+      </section>
+
+      <section class="slide" data-theme="sunset" aria-label="Efeitos colaterais observados">
+        <div class="slide-content report">
+          <h2 class="title reveal">EFEITOS COLATERAIS OBSERVADOS</h2>
+          <p class="small reveal">Estudo em andamento desde a primeira corrida</p>
+
+          <ul class="diagnostic-list">
+            <li class="reveal">Vontade de correr todos os dias</li>
+            <li class="reveal">Tornozelo inchado</li>
+            <li class="reveal">Endorfina liberada estranhamente todos os dias perto das 20h</li>
+            <li class="reveal">Saudade antecipada de ficar com você todos os dias</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="slide" data-theme="sunset" aria-label="Avaliação fisiológica">
+        <div class="slide-content chart">
+          <h2 class="title reveal">Estatísticas registradas quando estou com você</h2>
+          
+          <div class="vitals">
+            <div class="vital reveal">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M24 42s-14-8.7-14-19A8 8 0 0 1 24 17a8 8 0 0 1 14 6c0 10.3-14 19-14 19Z" />
+                <path d="M14 24h7l3-6 4 12 3-6h5" />
+              </svg>
+              <p>Frequência cardíaca: <strong><span class="counter" data-target="110">0</span> bpm (taquicardia leve)</strong></p>
+            </div>
+            <div class="vital reveal">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M11 27c3.5 0 3.5-8 7-8s3.5 8 7 8 3.5-8 7-8 3.5 8 7 8" />
+                <path d="M8 34h32" />
+              </svg>
+              <p>Sistema respiratório: <strong>Leve alteração</strong></p>
+            </div>
+            <div class="vital reveal">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M14 34c8 0 20-4 20-13a7 7 0 0 0-7-7c-2.7 0-4.3 1.3-5.5 3.1C20.3 15.3 18.7 14 16 14a7 7 0 0 0-7 7c0 9 7 13 17 13Z" />
+              </svg>
+              <p>Sistema muscular: <strong>Fraqueza quando você me beija</strong></p>
+            </div>
+            <div class="vital reveal">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M17 20a7 7 0 0 1 14 0v8a7 7 0 0 1-14 0Z" />
+                <path d="M13 22h4m14 0h4M24 13V9m0 30v-4m-9.5-2.5-2.8 2.8m24.6-24.6-2.8 2.8" />
+              </svg>
+              <p>Atividade neural: <strong>Pensando em você</strong></p>
+            </div>
+          </div>
+          <p class="conclusion reveal">Diagnóstico: grande impacto no meu sistema nervoso</p>
+        </div>
+      </section>
+
+      <section class="slide" data-theme="sunset" aria-label="Tempo tagarelar">
+        <div class="slide-content center">
+          <h2 class="title reveal">Quanto tempo eu poderia te ouvir tagarelar</h2>
+          <p class="small reveal">estimativa baseada em observação de campo</p>
+          <div class="chart-container reveal">
+            <div class="chart-axis">
+              <span>5 min</span>
+              <span>15 min</span>
+              <span>30 min</span>
+              <span>60 min</span>
+              <span>120 min</span>
+            </div>
+            <div class="progress-bar" id="tagarelar-bar"></div>
+          </div>
+          <div class="overflow-text" id="overflow-text" style="display: none;">
+            <p class="large-text">ERRO: DADOS INCONCLUSIVOS</p>
+            <p class="small-text">posso aguentar por tempo indeterminável</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-theme="sunset" aria-label="Top momentos do ano">
+        <div class="slide-content report">
+          <h2 class="title reveal">Top momentos de 2026 até agora</h2>
+          <div class="ranking">
+            <div class="rank-item" data-target="60%">
+              <span class="rank-emoji">🥉</span> Todos os seus intervalos 
+              <div class="bar"><div class="bar-inner" data-target="60%"></div></div>
+            </div>
+            <div class="rank-item" data-target="80%">
+              <span class="rank-emoji">🥈</span> Todos litros de bebidas compartilhados
+              <div class="bar"><div class="bar-inner" data-target="80%"></div></div>
+            </div>
+            <div class="rank-item" data-target="100%">
+              <span class="rank-emoji">🥇</span> Todas as horas de dengo acumuladas
+              <div class="bar"><div class="bar-inner" data-target="100%"></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tarot reading slide -->
+      <section class="slide" data-theme="night" aria-label="Leitura tarô">
+        <div class="slide-content tarot">
+          <h2 class="title reveal">Leitura Energética</h2>
+          <p class="intro reveal">Fiz uma tiragem no tarot para te ajudar</p>
+
+          <div class="tarot-cards">
+            <article class="tarot-card">
+              <div class="card-front"><img src="enamorados.jpg" alt="Carta 1" /></div>
+              <h3 class="card-name">Os Enamorados</h3>
+            </article>
+            <article class="tarot-card">
+              <div class="card-front"><img src="sol.jpg" alt="Carta 2" /></div>
+              <h3 class="card-name">O Sol</h3>
+            </article>
+            <article class="tarot-card">
+              <div class="card-front"><img src="mago.jpg" alt="Carta 3" /></div>
+              <h3 class="card-name">O Mago</h3>
+            </article>
+            <article class="tarot-card">
+              <div class="card-front"><img src="imperatriz.jpg" alt="Carta 4" /></div>
+              <h3 class="card-name">A Imperatriz</h3>
+            </article>
+          </div>
+
+
+          <p class="conclusion reveal">
+            Conclusão: você tem muita sorte e conheceu alguém incrível, bonita e inteligente (no caso eu), 
+            Se você for espertinha não vai desperdiçar essa oportunidade do universo <br />
+          </p>
+        </div>
+      </section>
+
+      <section class="slide" data-theme="night" aria-label="Mudança de cenário">
+        <div class="slide-content center">
+          <h1 class="title reveal">eu sei que a gente se perdeu no personagem</h1>
+          <h2 class="statement reveal">mas eu até senti um rat-tat-tat on my heart</h2>
+          <p class="small reveal">e vou sentir falta disso</p>
+  
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-theme="night" aria-label="Final cinematográfico">
+        <div class="slide-content center finale" id="finale">
+          <h1 class="hero reveal">Seu wrapped terminou</h1>
+          <h2 class="subhero reveal">Mas espero continuar fazendo parte dele!<br> 
+            Obrigado por todos os momentos, por cada beijo e cada abraço</h2>
+            <p class="small reveal">sei que sua rotina vai ser bem chata agora sem mim, mas prometo que volto pra você</p>
+      </section>
+    </main>
+
+    <!-- navigation arrow for slide progression -->
+    <button id="nextSlideBtn" aria-label="Próximo slide" class="nav-arrow">↓</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
