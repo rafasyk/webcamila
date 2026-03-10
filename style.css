@@ -493,31 +493,16 @@ li {
   transition-delay: 0.9s;
 }
 
-/* tarot slide styling */
+/* ==========================
+   Tarot Slide Styling
+   ========================== */
+
 .slide {
   transform-style: preserve-3d;
 }
 
+/* Container do slide tarot */
 .slide-tarot .slide-content,
-.slide-content.tarot {
-  background: rgba(0, 0, 0, 0.75);
-  padding: 1.2rem 1rem; /* less vertical padding to lift content up */
-  border-radius: 16px;
-  text-align: center;
-  max-height: 90vh;
-  overflow-y: auto;
-}
-
-@media (max-width: 600px) {
-  .slide-content.tarot {
-    max-height: 85vh;
-  }
-}
-
-/* ==========================
-   Tarot Slide Fix
-   ========================== */
-
 .slide-content.tarot {
   display: flex;
   flex-direction: column;
@@ -528,9 +513,19 @@ li {
   border-radius: 16px;
   text-align: center;
 
-  max-height: 90vh;       /* limita à altura da tela */
-  overflow-y: auto;       /* permite rolar para ver a conclusão completa */
+  max-height: 90vh;   /* limita à altura da tela */
+  overflow-y: auto;   /* permite rolar para ver toda a conclusão */
 }
+
+/* Mobile adjustment */
+@media (max-width: 600px) {
+  .slide-content.tarot {
+    max-height: 85vh;
+    padding: 1rem 0.8rem;
+  }
+}
+
+/* Grid de cartas */
 .tarot-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -540,6 +535,7 @@ li {
   justify-items: center;
 }
 
+/* Carta individual */
 .tarot-card {
   width: 100%;
   max-width: 160px;
@@ -553,9 +549,10 @@ li {
 
 .tarot-card:hover {
   transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 10px 30px rgba(212,175,55,0.35);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.35);
 }
 
+/* Frente da carta */
 .card-front {
   width: 100%;
   aspect-ratio: 2 / 3;
@@ -571,26 +568,34 @@ li {
   border-radius: 12px;
 }
 
+/* Nome e interpretação da carta */
 .card-name {
-  margin-top: 0.5rem;
+  margin: 0.6rem 0 0.2rem;
   font-size: 0.95rem;
   color: var(--dourado-suave);
+  text-align: center;
 }
 
 .card-interpretation {
   font-size: 0.85rem;
   color: var(--texto-claro);
-  margin-top: 0.2rem;
+  margin: 0.2rem 0 0.8rem;
+  text-align: center;
 }
 
+/* Conclusão */
 .conclusion {
   margin-top: 1.5rem;
   font-style: italic;
   text-align: center;
-  max-width: 90%;
+  color: var(--dourado-suave);
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  overflow-wrap: break-word; /* evita palavras longas saírem do container */
 }
 
-/* ====== Mobile ====== */
+/* Mobile: cartas menores e menos colunas */
 @media (max-width: 600px) {
   .tarot-cards {
     grid-template-columns: repeat(2, 1fr);
@@ -600,44 +605,6 @@ li {
   .tarot-card {
     max-width: 120px;
   }
-}
-
-
-/* ensure card text below image stays clear */
-.tarot-card h3,
-.tarot-card p {
-  position: relative;
-  z-index: 1;
-}
-
-.card-name {
-  margin: 0.6rem 0 0.2rem 0;
-  font-size: 0.95rem;
-  color: var(--dourado-suave);
-}
-
-.card-interpretation {
-  font-size: 0.85rem;
-  color: var(--texto-claro);
-  margin: 0.2rem 0 0.8rem;
-}
-
-/* generic conclusion style above */
-.conclusion {
-  margin-top: 3rem;
-  font-style: italic;
-}
-
-/* reduce gap between cards and conclusion specifically on tarot slide */
-.slide-content.tarot .conclusion {
-  margin-top: 1.5rem;
-  font-style: italic;
-  text-align: center;
-  color: var(--dourado-suave);
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  overflow-wrap: break-word; /* evita quebrar palavras longas */
 }
 
 @keyframes gradientFlow {
@@ -1040,6 +1007,7 @@ body.has-custom-cursor {
   color: rgba(246, 242, 238, 0.85);
   background: rgba(0, 0, 0, 0.55);
 }
+
 
 
 
