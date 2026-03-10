@@ -514,69 +514,38 @@ li {
   }
 }
 
+/* ==========================
+   Tarot Cards Section
+   ========================== */
+
 .tarot-cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
   margin: 2rem auto 1.6rem;
   justify-items: center;
 }
 
-/* mobile adjustments: allow wrapping and smaller cards */
-@media (max-width: 600px) {
-  .tarot-cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.8rem;
-    margin: 1.2rem auto 1rem;
-  }
-  .tarot-card {
-    width: 120px;
-  }
-  .slide-content.tarot {
-    padding: 1rem 0.8rem;
-  }
-  .conclusion {
-    margin-top: 0.6rem;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 800px) {
-  .tarot-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .tarot-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
 .tarot-card {
-  width: 160px;
-  /* height removed so name can flow underneath */
+  width: 100%;
+  max-width: 160px;
   perspective: 1000px;
   cursor: pointer;
-
   position: relative;
   display: grid;
   grid-template-rows: auto auto;
   justify-items: center;
-
-top: 0; /* ensure stacking context */
-
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   user-select: none;
+  box-sizing: border-box;
 }
 
 .tarot-card:hover {
   transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 10px 30px rgba(212,175,55,0.35);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.35);
 }
 
-
-/* reveal animation: card fades out and lifts slightly when revealed */
+/* reveal animation: card fades and lifts slightly when revealed */
 .tarot-card.revealed {
   opacity: 0.6;
   transform: translateY(-6px) scale(1.05);
@@ -590,11 +559,10 @@ top: 0; /* ensure stacking context */
 
 .card-front {
   width: 100%;
-  aspect-ratio: 2 / 3; /* maintain 160x240 proportion */
+  aspect-ratio: 2 / 3; /* maintains proportion */
   border-radius: 12px;
   overflow: hidden;
   position: relative;
-}.card-front {
   border: 2px solid var(--dourado-suave);
 }
 
@@ -602,7 +570,59 @@ top: 0; /* ensure stacking context */
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   border-radius: 12px;
+}
+
+/* Slide content adjustments */
+.slide-content.tarot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible; /* ensures all cards and conclusion are visible */
+  padding: 1rem 1rem;
+}
+
+/* Conclusion text */
+.conclusion {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ==========================
+   Mobile Adjustments
+   ========================== */
+
+@media (max-width: 800px) {
+  .tarot-cards {
+    gap: 0.8rem;
+  }
+  .tarot-card {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tarot-card {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 500px) {
+  .tarot-cards {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+  .tarot-card {
+    max-width: 100%;
+  }
+  .slide-content.tarot {
+    padding: 0.8rem 0.6rem;
+  }
+  .conclusion {
+    font-size: 0.85rem;
+  }
 }
 
 
@@ -1037,4 +1057,5 @@ body.has-custom-cursor {
   color: rgba(246, 242, 238, 0.85);
   background: rgba(0, 0, 0, 0.55);
 }
+
 
