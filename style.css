@@ -501,6 +501,14 @@ li {
   padding: 1.2rem 1rem; /* less vertical padding to lift content up */
   border-radius: 16px;
   text-align: center;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+  .slide-content.tarot {
+    max-height: 85vh;
+  }
 }
 
 .tarot-cards {
@@ -509,6 +517,25 @@ li {
   gap: 1.2rem;
   margin: 2rem auto 1.6rem;
   justify-items: center;
+}
+
+/* mobile adjustments: allow wrapping and smaller cards */
+@media (max-width: 600px) {
+  .tarot-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    margin: 1.2rem auto 1rem;
+  }
+  .tarot-card {
+    width: 120px;
+  }
+  .slide-content.tarot {
+    padding: 1rem 0.8rem;
+  }
+  .conclusion {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 800px) {
