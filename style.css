@@ -514,7 +514,7 @@ li {
   align-items: center;
   gap: 1rem;
   width: 95%;
-  max-width: 900px;
+  max-width: none;
   background: rgba(0, 0, 0, 0.75);
   border-radius: 16px;
   padding: 1.2rem 1rem;
@@ -522,7 +522,7 @@ li {
 
   /* removido limite de altura e scroll */
   height: auto;
-  overflow: auto;
+  overflow: visible;
   box-sizing: border-box;
 }
 
@@ -1021,6 +1021,7 @@ body.has-custom-cursor {
   color: rgba(246, 242, 238, 0.85);
   background: rgba(0, 0, 0, 0.55);
 }
+
 
 
 
