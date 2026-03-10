@@ -497,22 +497,21 @@ li {
    Tarot Slide Styling - SCROLL INTERNO GARANTIDO
    ========================== */
 
-.slide {
-  transform-style: preserve-3d;
+.slide-tarot {
   display: flex;
   justify-content: center;
-  align-items: flex-start;   /* agora o conteúdo começa do topo */
-  height: 100vh;             /* slide ocupa toda a tela */
+  align-items: flex-start; /* conteúdo começa do topo */
+  height: 100vh;
   width: 100%;
+  padding-top: 2rem;
   box-sizing: border-box;
-  padding-top: 2rem;         /* dá um pequeno espaço no topo */
 }
 
 .slide-tarot .slide-content,
 .slide-content.tarot {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;   /* mantém tudo do topo */
+  align-items: center;
   gap: 1rem;
   background: rgba(0, 0, 0, 0.75);
   padding: 1.2rem 1rem;
@@ -522,8 +521,8 @@ li {
   width: 95%;
   max-width: 900px;
 
-  max-height: 95vh;          /* limite máximo à tela */
-  overflow-y: auto;          /* scroll se o conteúdo for maior */
+  max-height: 85vh;      /* limite máximo à tela */
+  overflow-y: auto;      /* garante scroll interno */
   box-sizing: border-box;
 }
 
@@ -576,6 +575,8 @@ li {
   border-radius: 12px;
   overflow: hidden;
   border: 2px solid var(--dourado-suave);
+  background: rgba(0,0,0,0.25);
+  position: relative;
 }
 
 .card-front img {
@@ -583,6 +584,7 @@ li {
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
+  min-height: 160px;
 }
 
 /* Nome e interpretação */
@@ -616,6 +618,7 @@ li {
 
 /* ======= MOBILE ======= */
 @media (max-width: 600px) {
+  .slide-tarot .slide-content,
   .slide-content.tarot {
     max-height: 90%;      /* menor altura no mobile */
     padding: 1rem 0.8rem;
@@ -1030,6 +1033,7 @@ body.has-custom-cursor {
   color: rgba(246, 242, 238, 0.85);
   background: rgba(0, 0, 0, 0.55);
 }
+
 
 
 
