@@ -494,7 +494,7 @@ li {
 }
 
 /* ==========================
-   Tarot Slide Styling - SCROLL FUNCIONANDO
+   Tarot Slide Styling - SCROLL INTERNO GARANTIDO
    ========================== */
 
 .slide {
@@ -502,8 +502,9 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;  /* garante que o slide ocupe toda a tela */
+  height: 100vh;           /* slide ocupa toda a tela */
   width: 100%;
+  box-sizing: border-box;
 }
 
 .slide-tarot .slide-content,
@@ -520,12 +521,29 @@ li {
   width: 95%;
   max-width: 900px;
 
-  height: 90%;         /* ocupa quase toda a altura do slide */
-  overflow-y: auto;    /* permite scroll interno */
+  height: 90%;             /* ocupa quase toda a altura do slide */
+  overflow-y: auto;        /* scroll interno garante ver toda conclusão */
+  scrollbar-width: thin;   /* firefox - barra fina */
+  scrollbar-color: rgba(212,175,55,0.5) rgba(0,0,0,0.2); /* firefox - cores */
   box-sizing: border-box;
 }
 
-/* Tarot cards grid */
+/* Scroll customizado para Chrome/Edge/Safari */
+.slide-content.tarot::-webkit-scrollbar {
+  width: 8px;
+}
+
+.slide-content.tarot::-webkit-scrollbar-thumb {
+  background-color: rgba(212,175,55,0.5);
+  border-radius: 4px;
+}
+
+.slide-content.tarot::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+/* Grid de cartas */
 .tarot-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -535,7 +553,7 @@ li {
   justify-items: center;
 }
 
-/* Individual tarot card */
+/* Carta individual */
 .tarot-card {
   width: 100%;
   max-width: 160px;
@@ -552,7 +570,7 @@ li {
   box-shadow: 0 10px 30px rgba(212, 175, 55, 0.35);
 }
 
-/* Card front */
+/* Frente da carta */
 .card-front {
   width: 100%;
   aspect-ratio: 2 / 3;
@@ -568,7 +586,7 @@ li {
   border-radius: 12px;
 }
 
-/* Card name and interpretation */
+/* Nome e interpretação */
 .card-name {
   margin: 0.6rem 0 0.2rem;
   font-size: 0.95rem;
@@ -583,7 +601,7 @@ li {
   text-align: center;
 }
 
-/* Conclusion */
+/* Conclusão */
 .conclusion {
   margin-top: 1.5rem;
   font-style: italic;
@@ -593,12 +611,14 @@ li {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   overflow-wrap: break-word;
+  word-break: break-word;
+  width: 100%;
 }
 
 /* ======= MOBILE ======= */
 @media (max-width: 600px) {
   .slide-content.tarot {
-    height: 85%;      /* menor altura no mobile */
+    height: 85%;        /* menor altura no mobile */
     padding: 1rem 0.8rem;
   }
 
@@ -1011,6 +1031,7 @@ body.has-custom-cursor {
   color: rgba(246, 242, 238, 0.85);
   background: rgba(0, 0, 0, 0.55);
 }
+
 
 
 
